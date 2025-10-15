@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Reflection – Short Song, Long Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #fdfcf8;
+        --card: #ffffff;
+        --text: #333333;
+        --accent: #4e815c;
+        --muted: #888888;
+        --gap: 1.4rem;
+        --radius: 8px;
+        --font: "Helvetica Neue", Helvetica, Arial, "思源黑体", sans-serif;
+      }
+      body {
+        margin: 0;
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        padding: 2rem;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 600;
+        margin: 0 0 0.6rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+        letter-spacing: 0.5px;
+      }
+      h2 {
+        font-size: 1.25rem;
+        color: var(--accent);
+      }
+      .card {
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 2rem;
+        max-width: 680px;
+        margin: 0 auto 2rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      .meta {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 1.2rem;
+      }
+      .answer p {
+        margin: 0 0 1rem;
+      }
+      .placeholder {
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      .pic {
+        margin: 1.2rem 0;
+        text-align: center;
+      }
+      .pic img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      .pic figcaption {
+        margin-top: 0.4rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        letter-spacing: 0.3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Project Reflection</h1>
+      <div class="meta">
+        Short Song, Long Life &nbsp;·&nbsp; Yi Fan &nbsp;·&nbsp; S4106162
+      </div>
+      <div class="meta">
+        Prototype Link:
+        <a
+          href="https://yichiban1.github.io/Assessment-Task-2---Milestone-Presentation/"
+          target="_blank"
+          >https://yichiban1.github.io/Assessment-Task-2---Milestone-Presentation/</a
+        ><br />
+        Complete UI Link:
+        <a
+          href="https://yichiban1.github.io/Assessment-Task-3---Final-UI/"
+          target="_blank"
+          >https://yichiban1.github.io/Assessment-Task-3---Final-UI/</a
+        ><br />
+        Code Repository:
+        <a
+          href="https://github.com/yichiban1/Assessment-Task-3---Final-UI"
+          target="_blank"
+          >https://github.com/yichiban1/Assessment-Task-3---Final-UI</a
+        >
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>1. The guiding values of design and their embodiment in UI</h2>
+      <div class="answer">
+        <figure class="pic">
+          <img src="pica1.png" alt="picture" />
+          <figcaption>
+            Fig1. Cao Cao's Short Song (original poem) source: Wiki
+          </figcaption>
+        </figure>
+        <p>
+          The core design values ​​of this project are<strong>
+            "Cross-language poetic experience takes precedence over instrumental
+            translation"</strong
+          >and<strong>
+            "Guiding users to actively explore through interaction"</strong
+          >. I hope that users will not passively read a translated poem, but
+          gradually build a personal understanding of the sound, form and
+          meaning of the poem through their own operations, like solving a
+          puzzle.
+        </p>
+        <p>
+          These values ​​are reflected in the UI through the following specific
+          designs:
+        </p>
+        <ul>
+          <li>
+            Vertical typesetting and floating animation: This is not only to
+            restore and respect the original form of visual presentation of
+            ancient poetry books, but also to set a small "threshold". Users
+            need to adjust their reading habits slightly, and this process of
+            active adaptation itself can make people pay more attention to the
+            text itself. Floating animation gives static text vitality, making
+            the entire poem no longer boring.
+          </li>
+          <li>
+            Click triggers transliteration linkage: bind sound (tonejs), vision
+            (color, translation) and meaning (annotation) in one or several
+            clicks to create an interactive experience of "exploration". The
+            user is not querying a word, but "triggering" the complete
+            expression of a poem.
+          </li>
+          <li>
+            Strict single-sentence translation display: Mandatoryly sets the
+            pace for user exploration to prevent information overload. The
+            mechanism requires users to understand the poem sentence by sentence
+            when viewing the poem, rather than reading it quickly and hastily.
+            This is consistent with the appreciation of classical poetry.
+          </li>
+        </ul>
+        <figure class="pic">
+          <img src="pica10.png" alt="picture" />
+          <figcaption>Fig2. User and system interaction logic</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>
+        2. Design Concepts of UI Feedback, Information Design, Mapping, and
+        Learnability
+      </h2>
+      <div class="answer">
+        <strong>1. Feedback design</strong>
+        <p>
+          Instant and continuous feedback: Different changes in notes (instant)
+          and colors when tapped (continuous) give the user a clear idea that
+          the system has received an instruction and that the status has
+          changed.
+        </p>
+        <p>Progressive information disclosure:</p>
+        <p>
+          First level (hover): The verse is displayed turning yellow, indicating
+          that it is clickable.
+        </p>
+        <p>
+          Second layer (click): play notes, display translations, random color
+          change.
+        </p>
+        <p>
+          The third layer (double click): A detailed explanation of the literary
+          and historical background appears at the bottom to meet the needs of
+          in-depth exploration.
+        </p>
+        <p>
+          Hidden Layer (Spacebar): Toggles day and night mode, a feature that
+          requires "discovery", increasing the usability and usability of the
+          overall UI.
+        </p>
+        <strong>2. Information design </strong>
+        <p>
+          Clear priorities: The original Chinese poem is always the absolute
+          center of vision, emphasized with large fonts and vertical rows. As an
+          auxiliary comprehension tool, English translation is placed on the
+          right side with small font size and horizontal layout, which is both
+          clear and readable without damaging the main structure.
+        </p>
+        <figure class="pic">
+          <img src="pica2.png" alt="picture" />
+          <figcaption>Fig3. Website click event effect example</figcaption>
+        </figure>
+        <p>
+          Contextual tips: The captions at the top of the carousel are not
+          simple instructions, but are interspersed with context, provenance,
+          and translation statements. This does not interfere with the main
+          interface, while strengthening the overall UI background while
+          building a credible cultural context for the entire work.
+        </p>
+        <p>
+          Non-modal feedback: All prompts (e.g., translations, background
+          information) appear in a non-intrusive manner without interrupting the
+          user's current reading flow.
+        </p>
+
+        <strong>3. Mapping and Learnability </strong>
+        <p>
+          Direct Action: Users tap directly on the poem they're interested in,
+          rather than using an additional button or menu. This minimizes the
+          interaction path and provides the most direct mapping.
+        </p>
+        <p>
+          Consistency: The interaction pattern is identical across all poem
+          lines. Once users master the first line, they can anticipate the
+          behavior for the remaining lines, minimizing the learning curve.
+        </p>
+        <p>
+          Discoverability: Through visual cues (such as hover effects) and
+          progressive prompts (such as "Double-click text for annotations" in
+          the carousel subtitles), users are guided to discover deeper
+          functionality, enhancing the sense of discovery during use.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Significant Changes Since the Mid-Term Milestone</h2>
+      <p>
+        From the initial prototype to the final version, the project underwent a
+        thorough reconstruction and upgrade, mainly focusing on four core
+        dimensions: audio experience, visual system, interaction logic and
+        information architecture.
+      </p>
+      <strong
+        >1.Audio system: from basic function implementation to atmosphere
+        creation
+      </strong>
+      <br />
+      <span
+        >The initial version uses the basic Tone.Synth(), which only realizes
+        single-note playback, and the timbre is mechanical and the interaction
+        is stiff. The final version is upgraded to a complete audio architecture
+        of polyphonic synthesizer + effects chain:</span
+      >
+
+      <p>
+        Support for simultaneous playback of multiple notes with Tone.PolySynth,
+        ensuring smooth operation of the "Play" function Add the FeedbackDelay
+        effect to create an ethereal reverberation texture that matches the
+        artistic conception of the poem Adjust the detail parameters (attack:
+        0.05, release: 2) to make the sound sound softer and more natural
+      </p>
+      <p>
+        This shift reflects the evolution of the design philosophy from "with
+        sound" to "with good sound", where audio is no longer a functional
+        embellishment but a core component of the immersive experience.
+      </p>
+      <strong
+        >2. Visual system: from static layout to dynamic experience
+      </strong>
+      <br /><span
+        >The initial version featured only a basic vertical text layout, but the
+        final version incorporates a complete dynamic visual language
+        system:</span
+      >
+      <p>Multi-layered animation architecture</p>
+      <ul>
+        <li>
+          Basic floating animation: Each verse floats independently, with odd
+          and even rows moving at different speeds to create a sense of rhythm.
+        </li>
+        <br />
+        <li>
+          Progressive emergence: Verses fade in sequentially, avoiding abrupt
+          loading.
+        </li>
+        <br />
+        <li>
+          Light columns and halos: Pseudo-elements are used to add a breathing
+          light effect to each column of verses, adding visual depth.
+        </li>
+      </ul>
+      <p>Color and state management system</p>
+
+      <p>
+        The initial version only featured basic click-to-display translation
+        functionality. The final version features a hierarchical interaction
+        system
+      </p>
+      <span>Core Interaction (Click): </span>
+      <p>
+        Implements a "single-select card" translation display, ensuring strict
+        interface clarity. Integrates complex feedback with audio playback,
+        color changes, and halo emphasis. Adds a typewriter effect to enhance
+        the ritual of translation.
+      </p>
+      <p>Deep Interaction (Double Click):</p>
+      <p>
+        Adds museum-style cultural annotations, displaying detailed historical
+        context. Timed disappearance ensures a balance between information
+        delivery and interface clutter.
+      </p>
+
+      <figure class="pic">
+        <img src="pica3.png" alt="picture" />
+        <figcaption>Fig4. First version of switching display modes</figcaption>
+      </figure>
+      <p>Environmental Interaction (Keyboard):</p>
+      <p>
+        The spacebar switches between day and night modes, adapting to different
+        reading environments.
+      </p>
+    </div>
+    <div class="card">
+      <h2>4. Production Timeline and Development Time Allocation</h2>
+      <p>
+        Weeks 6 and 7 (Laying the Foundation): Focused on overcoming technical
+        challenges, namely integrating Tone.js and vertical text layout. Ensured
+        the core "audio-visual integration" mechanism was operational. Week 8
+        (Building the Core Experience): Implemented the complete click
+        interaction logic chain: unlocking the audio context -> playing a note
+        -> toggling the translation display -> recording. This was the most
+        feature-intensive phase. Week 9 (Polishing and Optimization): This was
+        the longest phase, focusing primarily on CSS animations and visual
+        aesthetics. Adjusted the curves of the floating animation, designed the
+        breathing effects of the light column and halo, and repeatedly tweaked
+        the color and opacity to ensure readability and a sense of atmosphere.
+        Week 10 (Functional Expansion and Refinement): Added double-click
+        prompts, carousel subtitles, and day/night mode. These were "icing on
+        the cake," but significantly enriched the product's content and
+        completion. Weeks 11 and 12 (Testing and Finalization): browser testing
+        and fixed issues such as audio overlap caused by clicking too quickly.
+        Documentation was also written.
+      </p>
+
+      <figure class="pic">
+        <img src="pica4.png" alt="picture" />
+        <figcaption>Fig5. Timeline flowchart</figcaption>
+      </figure>
+      <p>
+        In terms of time allocation, approximately 40% was spent on core
+        functionality, 45% on visual polish and user experience optimization,
+        and 15% on expanding functionality and testing. The focus of the
+        project's later stages shifted from "implementing functionality" to
+        "improving quality."
+      </p>
+    </div>
+    <div class="card">
+      <h2>5. The design aspect we are most proud of</h2>
+      <p>
+        I'm most proud of the "column theme color halo system." It's more than
+        just a visual decoration. Its implementation logic is as follows: In
+        CSS, a CSS variable, --colHue, is defined for each column
+        (.col:nth-child(n)). The .col::after pseudo-element creates a radial
+        gradient elliptical halo, whose color is bound to --colHue. In
+        JavaScript, when a verse in a column is clicked, a randomly generated
+        color hue is synchronized to the --colHue of its parent column element.
+        This also triggers a brief zoom-in animation (col.animate). This process
+        successfully transforms a click event on a single verse into a visual
+        emphasis on the entire column, integrating sound, poetry, and scenery
+        through color.
+      </p>
+      <figure class="pic">
+        <img src="pica5.png" alt="picture" />
+        <figcaption>Fig6. CSS historical modification records</figcaption>
+      </figure>
+    </div>
+    <div class="card">
+      <h2>6. The most challenging design aspects</h2>
+      <p>
+        The most challenging aspect was “seamlessly integrating English
+        translations within the strict constraints of vertical layout.”
+      </p>
+      <p>
+        This was not merely a technical issue but a design and interaction
+        challenge. The difficulties lay in:
+      </p>
+      <p>
+        <strong>Technical layer:</strong> English text must be detached from the
+        document flow using `position: absolute`, with precise calculations for
+        `left: 100%` and `transform: translateY(-50%)` to position it midway to
+        the right of the Chinese text. Minor positioning variations caused by
+        differing English text lengths also needed handling.
+      </p>
+      <figure class="pic">
+        <img src="pica6.png" alt="picture" />
+        <figcaption>
+          Fig7. Change the layout and add the first version of the carousel
+          subtitles above
+        </figcaption>
+      </figure>
+      <p>
+        <strong>Design layer:</strong> How to ensure horizontally aligned
+        English text with smaller fonts doesn't appear jarring? I ultimately
+        introduced a frosted glass backdrop (`background: hsla(0, 0%, 7%, 0.35);
+        backdrop-filter: blur(4px);`). This detail proved crucial—it provides
+        the translated text with its own textured “backing,” allowing it to
+        gently emerge from the background. This ensures clarity while seamlessly
+        integrating into the overall dark-toned design.
+      </p>
+      <figure class="pic">
+        <img src="pica7.png" alt="picture" />
+        <figcaption>
+          Fig8. To improve readability, the first version adds a focus effect
+          and uses background color changes for differentiation.
+        </figcaption>
+      </figure>
+      <p>
+        <strong>Interaction Logic:</strong> Implementing the “single-selection
+        card” display logic required precise management of the currentLine
+        variable's state, with checks and cleanup triggered on every click. This
+        formed the foundation of the entire interaction—a single error would
+        have shattered the experience.
+      </p>
+      <p>
+        Overcoming this challenge was precisely the process that transformed
+        this project from “an idea” into “a functional interactive website.”
+      </p>
+    </div>
+  </body>
+</html>
